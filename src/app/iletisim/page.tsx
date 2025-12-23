@@ -2,21 +2,67 @@
 
 import { useState } from "react";
 import { Button } from "@/components/ui/Button";
-import { Mail, MapPin, Phone, Clock, CheckCircle } from "lucide-react";
+import { Mail, MapPin, Phone, Clock, CheckCircle, AlertTriangle, Loader2 } from "lucide-react";
+
+interface FormData {
+    name: string;
+    phone: string;
+    subject: string;
+    message: string;
+}
 
 export default function ContactPage() {
     const [isSubmitted, setIsSubmitted] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
+    const [error, setError] = useState<string | null>(null);
+    const [formData, setFormData] = useState<FormData>({
+        name: "",
+        phone: "",
+        subject: "genel",
+        message: "",
+    });
+
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+        setFormData({
+            ...formData,
+            [e.target.name]: e.target.value,
+        });
+        setError(null);
+    };
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         setIsLoading(true);
+        setError(null);
 
-        // Simulate form submission (replace with actual API call later)
-        await new Promise(resolve => setTimeout(resolve, 1000));
+        try {
+            const response = await fetch("/api/contact", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(formData),
+            });
 
-        setIsLoading(false);
-        setIsSubmitted(true);
+            const data = await response.json();
+
+            if (!response.ok) {
+                if (response.status === 429) {
+                    setError(`Çok fazla istek gönderildi. ${data.message}`);
+                } else if (response.status === 400) {
+                    setError(data.details?.join(", ") || "Form verileri geçersiz.");
+                } else {
+                    setError(data.message || "Bir hata oluştu. Lütfen tekrar deneyin.");
+                }
+                return;
+            }
+
+            setIsSubmitted(true);
+        } catch {
+            setError("Bağlantı hatası. Lütfen internet bağlantınızı kontrol edin.");
+        } finally {
+            setIsLoading(false);
+        }
     };
 
     return (
@@ -95,6 +141,13 @@ export default function ContactPage() {
                             </div>
                         ) : (
                             <form onSubmit={handleSubmit} className="space-y-4">
+                                {error && (
+                                    <div className="bg-red-50 border border-red-200 rounded-lg p-4 flex items-start gap-3">
+                                        <AlertTriangle className="h-5 w-5 text-red-500 shrink-0 mt-0.5" />
+                                        <p className="text-red-700 text-sm">{error}</p>
+                                    </div>
+                                )}
+
                                 <div>
                                     <label htmlFor="name" className="block text-sm font-semibold text-slate-700 mb-2">
                                         Adınız Soyadınız
@@ -104,6 +157,8 @@ export default function ContactPage() {
                                         id="name"
                                         name="name"
                                         required
+                                        value={formData.name}
+                                        onChange={handleChange}
                                         className="w-full rounded-lg border border-slate-300 p-3 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-shadow outline-none"
                                         placeholder="Adınız Soyadınız"
                                     />
@@ -117,6 +172,8 @@ export default function ContactPage() {
                                         id="phone"
                                         name="phone"
                                         required
+                                        value={formData.phone}
+                                        onChange={handleChange}
                                         className="w-full rounded-lg border border-slate-300 p-3 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-shadow outline-none"
                                         placeholder="0500 000 00 00"
                                     />
@@ -128,6 +185,8 @@ export default function ContactPage() {
                                     <select
                                         id="subject"
                                         name="subject"
+                                        value={formData.subject}
+                                        onChange={handleChange}
                                         className="w-full rounded-lg border border-slate-300 p-3 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-shadow outline-none bg-white"
                                     >
                                         <option value="genel">Genel Danışmanlık</option>
@@ -146,13 +205,26 @@ export default function ContactPage() {
                                         name="message"
                                         rows={4}
                                         required
+                                        value={formData.message}
+                                        onChange={handleChange}
                                         className="w-full rounded-lg border border-slate-300 p-3 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-shadow outline-none"
                                         placeholder="Kısaca durumunuzu özetleyin..."
                                     />
                                 </div>
                                 <Button type="submit" className="w-full" disabled={isLoading}>
-                                    {isLoading ? "Gönderiliyor..." : "Gönder"}
+                                    {isLoading ? (
+                                        <span className="flex items-center justify-center gap-2">
+                                            <Loader2 className="h-4 w-4 animate-spin" />
+                                            Gönderiliyor...
+                                        </span>
+                                    ) : (
+                                        "Gönder"
+                                    )}
                                 </Button>
+
+                                <p className="text-xs text-slate-500 text-center mt-4">
+                                    Bu form güvenli bağlantı üzerinden gönderilir. 5 dakikada en fazla 5 mesaj gönderilebilir.
+                                </p>
                             </form>
                         )}
                     </div>
@@ -161,3 +233,4 @@ export default function ContactPage() {
         </div>
     );
 }
+
