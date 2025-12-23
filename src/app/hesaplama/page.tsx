@@ -16,7 +16,7 @@ const tools = [
 
 export default function CalculatorsPage() {
     return (
-        <div className="bg-slate-50 py-16 min-h-screen">
+        <div className="bg-slate-50 py-16 pt-28 min-h-screen">
             <div className="container mx-auto px-6">
                 <div className="mb-12 text-center">
                     <h1 className="text-4xl font-bold text-slate-900 font-playfair">Hesaplama Araçları</h1>

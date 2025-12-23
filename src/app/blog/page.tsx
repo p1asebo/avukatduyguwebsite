@@ -3,14 +3,16 @@ import { Card } from "@/components/ui/Card";
 
 export default function BlogPage() {
     return (
-        <div className="min-h-screen bg-slate-50 pb-24">
+        <div className="min-h-screen bg-slate-50 pb-24 pt-20">
             {/* Search Header */}
             <div className="bg-slate-900 py-20 text-white">
                 <div className="container mx-auto px-6 text-center">
                     <h1 className="mb-8 text-4xl font-bold font-playfair">Hukuki Blog & Makaleler</h1>
                     <div className="mx-auto max-w-2xl relative">
                         <input
-                            type="text"
+                            type="search"
+                            name="search"
+                            aria-label="Blog yazılarında ara"
                             placeholder="Kiracı tahliyesi, boşanma protokolü ara..."
                             className="w-full rounded-full border-0 bg-white/10 px-6 py-4 pl-14 text-white placeholder:text-slate-400 backdrop-blur-md focus:bg-white/20 focus:outline-none focus:ring-2 focus:ring-blue-500"
                         />

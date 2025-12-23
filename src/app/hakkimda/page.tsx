@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/Button";
 
 export default function AboutPage() {
     return (
-        <div className="bg-white pb-24 pt-12">
+        <div className="bg-white pb-24 pt-28">
             <div className="container mx-auto px-6">
                 <h1 className="mb-12 text-center text-4xl font-bold text-slate-900 font-playfair">Hakkımda</h1>
 

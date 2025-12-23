@@ -22,6 +22,7 @@ const config: Config = {
             },
             fontFamily: {
                 sans: ['var(--font-jakarta)', 'sans-serif'],
+                playfair: ['var(--font-playfair)', 'serif'],
             },
         },
     },
