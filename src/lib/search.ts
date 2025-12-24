@@ -25,7 +25,7 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
     {
         slug: "yargitay-2024-ziynet-esyasi-ictihat-degisikligi",
-        title: "Yargıtay 2. Hukuk Dairesi'nin 2024 Ziynet Eşyası İçtihat Değişikliği ve Uygulama Rehberi",
+        title: "Yargıtay 2. Hukuk Dairesi'nin 2024 Ziynet Eşyası İçtihat Değişikliği",
         excerpt: "Yargıtay'ın ziynet eşyaları konusundaki 2024 içtihadını, eski uygulamalarla karşılaştırarak inceleyen kapsamlı hukuki analiz. Mülkiyet hakkı, ispat yükü ve üçlü test kriterleri.",
         category: "Aile Hukuku",
         categorySlug: "aile-hukuku",
