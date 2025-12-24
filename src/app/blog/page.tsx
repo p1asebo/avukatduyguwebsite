@@ -1,18 +1,40 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Search, Tag, Calendar, Clock, AlertCircle, Eye } from "lucide-react";
+import { Search, Tag, Calendar, Clock, AlertCircle, Eye, ChevronLeft, ChevronRight } from "lucide-react";
 import { Card } from "@/components/ui/Card";
-import { searchBlog, getCategories, type BlogPost } from "@/lib/search";
+import { searchBlog, getCategories } from "@/lib/search";
+
+const POSTS_PER_PAGE = 9;
 
 export default function BlogPage() {
     const [searchQuery, setSearchQuery] = useState("");
+    const [currentPage, setCurrentPage] = useState(1);
     const categories = getCategories();
 
     const searchResult = useMemo(() => {
         return searchBlog(searchQuery);
+    }, [searchQuery]);
+
+    // Sort posts by date (newest first)
+    const sortedPosts = useMemo(() => {
+        return [...searchResult.posts].sort((a, b) =>
+            new Date(b.date).getTime() - new Date(a.date).getTime()
+        );
+    }, [searchResult.posts]);
+
+    // Pagination logic
+    const totalPages = Math.ceil(sortedPosts.length / POSTS_PER_PAGE);
+    const paginatedPosts = sortedPosts.slice(
+        (currentPage - 1) * POSTS_PER_PAGE,
+        currentPage * POSTS_PER_PAGE
+    );
+
+    // Reset to page 1 when search changes
+    useEffect(() => {
+        setCurrentPage(1);
     }, [searchQuery]);
 
     return (
@@ -54,11 +76,23 @@ export default function BlogPage() {
                 {searchQuery && (
                     <div className="mb-8">
                         <p className="text-slate-600">
-                            "{searchQuery}" için
+                            &quot;{searchQuery}&quot; için
                             <span className="font-semibold text-blue-600 ml-1">
                                 {searchResult.posts.length} sonuç
                             </span>
-                            {" "}bulundu
+                            {searchResult.suggestions.length > 0 && (
+                                <span className="ml-2">
+                                    - Benzer: {searchResult.suggestions.map((s, i) => (
+                                        <button
+                                            key={i}
+                                            onClick={() => setSearchQuery(s)}
+                                            className="text-blue-500 hover:underline mr-2"
+                                        >
+                                            {s}
+                                        </button>
+                                    ))}
+                                </span>
+                            )}
                         </p>
                     </div>
                 )}
@@ -66,41 +100,25 @@ export default function BlogPage() {
                 {/* No Results */}
                 {!searchResult.hasResults && (
                     <div className="text-center py-16">
-                        <AlertCircle className="h-16 w-16 text-slate-300 mx-auto mb-4" />
-                        <h2 className="text-xl font-bold text-slate-700 mb-2">Sonuç Bulunamadı</h2>
-                        <p className="text-slate-500 mb-6">
-                            "{searchQuery}" ile eşleşen yazı bulunamadı.
+                        <AlertCircle className="h-12 w-12 text-slate-400 mx-auto mb-4" />
+                        <h3 className="text-xl font-bold text-slate-700 mb-2">Sonuç bulunamadı</h3>
+                        <p className="text-slate-500">
+                            Farklı anahtar kelimeler deneyebilir veya kategorilerden birine tıklayabilirsiniz.
                         </p>
-                        {searchResult.suggestions.length > 0 && (
-                            <div>
-                                <p className="text-slate-600 mb-3">Bu kategorilere göz atmak ister misiniz?</p>
-                                <div className="flex flex-wrap justify-center gap-2">
-                                    {searchResult.suggestions.map((cat, i) => (
-                                        <button
-                                            key={i}
-                                            onClick={() => setSearchQuery(cat)}
-                                            className="px-4 py-2 rounded-full bg-blue-100 text-blue-700 hover:bg-blue-200 transition-colors"
-                                        >
-                                            {cat}
-                                        </button>
-                                    ))}
-                                </div>
-                            </div>
-                        )}
                     </div>
                 )}
 
                 {/* Blog Posts Grid */}
                 {searchResult.hasResults && (
                     <>
-                        {/* Featured Posts (only show when no search) */}
-                        {!searchQuery && (
+                        {/* Featured Posts (only show when no search and on page 1) */}
+                        {!searchQuery && currentPage === 1 && (
                             <div className="mb-16">
                                 <h2 className="text-2xl font-bold mb-8 text-slate-800 border-l-4 border-blue-500 pl-4">
                                     Öne Çıkan Yazılar
                                 </h2>
                                 <div className="grid md:grid-cols-2 gap-8">
-                                    {searchResult.posts.slice(0, 2).map((post) => (
+                                    {sortedPosts.slice(0, 2).map((post) => (
                                         <Link key={post.slug} href={`/blog/${post.categorySlug}/${post.slug}`}>
                                             <Card className="hover:shadow-lg cursor-pointer bg-white group overflow-hidden">
                                                 <div className="h-48 bg-gradient-to-br from-blue-500 to-blue-700 rounded-lg mb-4 flex items-center justify-center relative overflow-hidden">
@@ -144,10 +162,10 @@ export default function BlogPage() {
 
                         {/* All/Filtered Posts */}
                         <h2 className="text-2xl font-bold mb-8 text-slate-800 border-l-4 border-blue-500 pl-4">
-                            {searchQuery ? "Arama Sonuçları" : "Son Yazılar"}
+                            {searchQuery ? "Arama Sonuçları" : "Tüm Yazılar"}
                         </h2>
                         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-                            {(searchQuery ? searchResult.posts : searchResult.posts.slice(2)).map((post) => (
+                            {paginatedPosts.map((post) => (
                                 <Link key={post.slug} href={`/blog/${post.categorySlug}/${post.slug}`}>
                                     <Card className="hover:shadow-md cursor-pointer transition-all hover:bg-white bg-white/80 h-full group">
                                         <div className="flex items-center gap-2 mb-3">
@@ -184,10 +202,45 @@ export default function BlogPage() {
                                 </Link>
                             ))}
                         </div>
+
+                        {/* Pagination Controls */}
+                        {totalPages > 1 && (
+                            <div className="flex items-center justify-center gap-2 mt-12">
+                                <button
+                                    onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
+                                    disabled={currentPage === 1}
+                                    className="flex items-center gap-1 px-4 py-2 rounded-lg bg-white border border-slate-200 text-slate-600 hover:bg-slate-50 disabled:opacity-50 disabled:cursor-not-allowed"
+                                >
+                                    <ChevronLeft className="h-4 w-4" />
+                                    Önceki
+                                </button>
+
+                                {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+                                    <button
+                                        key={page}
+                                        onClick={() => setCurrentPage(page)}
+                                        className={`w-10 h-10 rounded-lg font-medium ${currentPage === page
+                                                ? "bg-blue-600 text-white"
+                                                : "bg-white border border-slate-200 text-slate-600 hover:bg-slate-50"
+                                            }`}
+                                    >
+                                        {page}
+                                    </button>
+                                ))}
+
+                                <button
+                                    onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))}
+                                    disabled={currentPage === totalPages}
+                                    className="flex items-center gap-1 px-4 py-2 rounded-lg bg-white border border-slate-200 text-slate-600 hover:bg-slate-50 disabled:opacity-50 disabled:cursor-not-allowed"
+                                >
+                                    Sonraki
+                                    <ChevronRight className="h-4 w-4" />
+                                </button>
+                            </div>
+                        )}
                     </>
                 )}
             </div>
         </div>
     );
 }
-

@@ -37,11 +37,11 @@ export const blogPosts: BlogPost[] = [
         views: 2847,
         content: `
 <div class="summary-box">
-    <strong>📋 Makalenin Kapsamı</strong>
-    <p>Bu rehber, Yargıtay 2. Hukuk Dairesi'nin <strong>E. 2023/5704, K. 2024/2402</strong> sayılı kararı ile değişen ziynet eşyası içtihadını, eski uygulamalarla karşılaştırarak analiz etmektedir. Hedef kitle: Boşanma aşamasındaki bireyler, hukuki gelişmeleri takip eden vatandaşlar ve stajyer avukatlar.</p>
+    <strong>📋 Yazının Kapsamı</strong>
+    <p>Bu yazı, Yargıtay 2. Hukuk Dairesi'nin <strong>E. 2023/5704, K. 2024/2402</strong> sayılı kararı ile değişen ziynet eşyası içtihadını, eski uygulamalarla karşılaştırarak analiz etmektedir.</p>
 </div>
 
-<h2>A. Giriş: Hukuki Paradigma Değişimi</h2>
+<h2>Giriş: Hukuki Paradigma Değişimi</h2>
 
 <p>Türk boşanma hukukunda uzun yıllar boyunca yerleşik bir anlayış hâkim olmuştur: <em>"Düğünde takılan her şey kadına aittir."</em> Bu anlayış, toplumsal kabul görmekle birlikte, mülkiyet hukukunun temel ilkeleriyle çatışma potansiyeli taşımaktaydı.</p>
 
@@ -53,20 +53,20 @@ export const blogPosts: BlogPost[] = [
     <li><strong>Cinsiyet Ayrımı:</strong> Takının niteliği (kadına özgü, erkeğe özgü veya nötr) mülkiyet tespitinde belirleyici kriter olarak kabul edilmektedir.</li>
 </ul>
 
-<h2>B. Ziynet Mülkiyetinin Belirlenmesinde "Üçlü Test" (The Three-Step Test)</h2>
+<h2>Ziynet Mülkiyetinin Belirlenmesinde "Üçlü Test"</h2>
 
 <p>Güncel içtihada göre, ziynet eşyasının mülkiyetinin tespitinde aşağıdaki hiyerarşik değerlendirme uygulanmaktadır:</p>
 
-<h3>1. Birinci Öncelik: Eşler Arası Anlaşma</h3>
+<h3>Birinci Öncelik: Eşler Arası Anlaşma</h3>
 <p>Tarafların evlilik öncesinde veya sırasında ziynet eşyalarının mülkiyetine ilişkin açık veya zımni bir anlaşma yapıp yapmadıkları araştırılır. Yazılı protokoller veya tanık beyanlarıyla ispat edilebilen sözlü anlaşmalar bu kapsamda değerlendirilir.</p>
 
-<h3>2. İkinci Öncelik: Yöresel Örf ve Adet</h3>
+<h3>İkinci Öncelik: Yöresel Örf ve Adet</h3>
 <p>Anlaşmanın bulunmadığı hallerde, düğünün yapıldığı yörede geçerli olan örf ve adetlere başvurulur. Ancak bu noktada dikkat edilmesi gereken husus şudur: <em>Örf ve adetin varlığını iddia eden taraf, bu iddiasını ispatla yükümlüdür.</em></p>
 
-<h3>3. Üçüncü Öncelik: Genel Kural – "Kime Takıldıysa Onundur"</h3>
+<h3>Üçüncü Öncelik: Genel Kural – "Kime Takıldıysa Onundur"</h3>
 <p>İlk iki kriter uygulanamadığında, Yargıtay'ın 2024 içtihadı devreye girer: <strong>Ziynet eşyası, fiziken kime takıldı veya kime teslim edildiyse, o kişinin kişisel malı olarak kabul edilir.</strong></p>
 
-<h2>C. Kritik Ayrım: Cinsiyet Özgülüğü ve Nötr Takılar</h2>
+<h2>Kritik Ayrım: Cinsiyet Özgülüğü ve Nötr Takılar</h2>
 
 <p>Ziynet eşyalarının mülkiyet tespitinde "takının niteliği" özel önem taşımaktadır. Bu bağlamda üç kategori söz konusudur:</p>
 
@@ -76,7 +76,7 @@ export const blogPosts: BlogPost[] = [
 <h3>Erkeğe Özgü Ziynet Eşyaları</h3>
 <p>Erkek kol saati, kol düğmesi, kravat iğnesi gibi doğası gereği yalnızca erkeğin kullanabileceği takılar erkeğe aittir.</p>
 
-<h3>Nötr (Unisex) Ziynet Eşyaları – En Önemli Kategori</h3>
+<h3>Nötr Ziynet Eşyaları – En Önemli Kategori</h3>
 <p>Çeyrek altın, yarım altın, tam altın, Cumhuriyet altını, Reşat altını ve nakit para/döviz "nötr" kategoride yer almaktadır. <strong>2024 içtihadının getirdiği en önemli değişiklik bu kategoride gerçekleşmiştir:</strong></p>
 
 <ul>
@@ -132,7 +132,7 @@ export const blogPosts: BlogPost[] = [
 </table>
 </div>
 
-<h2>D. "Takı Sandığı" (Torba/Kese) Durumu</h2>
+<h2>"Takı Sandığı" Durumu</h2>
 
 <p>Düğün organizasyonlarında takıların kişilerin üzerine tek tek takılmayıp, dolaştırılan bir kese, sandık veya torbaya atılması sıklıkla karşılaşılan bir uygulamadır. Bu durumun hukuki sonucu özel önem taşımaktadır.</p>
 
@@ -145,7 +145,7 @@ export const blogPosts: BlogPost[] = [
 
 <p><em>Önemli:</em> Bu paylaşımın söz konusu olabilmesi için takıların gerçekten "ortak sandığa" atıldığının ve bireysel takım ayrımının yapılamadığının ispat edilmesi gerekmektedir.</p>
 
-<h2>E. İspat Yükü ve Deliller</h2>
+<h2>İspat Yükü ve Deliller</h2>
 
 <h3>Olağan Akış İlkesi</h3>
 <p>Yargıtay'ın yerleşik uygulamasına göre, hayatın olağan akışı gereği ziynet eşyalarının kadının zilyetliğinde (uhdesinde) olduğu varsayılır. Kadın eş, takıların elinden alındığını veya zorla bozdurulduğunu iddia ediyorsa, <strong>bu iddiasını ispatla yükümlüdür</strong>.</p>
@@ -162,7 +162,7 @@ export const blogPosts: BlogPost[] = [
 <h3>"Geri Verdim" Savunması</h3>
 <p>Erkek eşin "takıları aldım ancak geri verdim" şeklinde savunma yapması halinde, <strong>ispat yükü erkeğe geçer</strong>. Erkeğin bu savunmasını destekler delil sunması gerekmektedir.</p>
 
-<h2>F. Zamanaşımı ve Dava Türleri</h2>
+<h2>Zamanaşımı ve Dava Türleri</h2>
 
 <h3>Aynen İade (İstihkak) Davası</h3>
 <p>Ziynet eşyasının aynen iadesi talep ediliyorsa, bu talep mülkiyet hakkına dayandığından <strong>zamanaşımına tabi değildir</strong>. Mülkiyet hakkının zaman aşımına uğramayacağı evrensel bir hukuk ilkesidir.</p>
@@ -170,7 +170,7 @@ export const blogPosts: BlogPost[] = [
 <h3>Bedel İadesi (Tazminat) Davası</h3>
 <p>Ziynet eşyasının bedelinin ödenmesi talep ediliyorsa, boşanma kararının kesinleşmesinden itibaren <strong>10 yıllık genel zamanaşımı süresi</strong> uygulanır.</p>
 
-<h2>G. Örnek Senaryolar (Somut Olay Değerlendirmeleri)</h2>
+<h2>Örnek Senaryolar</h2>
 
 <div class="summary-box">
     <strong>Senaryo 1: Damada Takılan Çeyrek Altınlar</strong>

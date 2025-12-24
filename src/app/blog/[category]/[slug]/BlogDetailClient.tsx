@@ -11,10 +11,10 @@ export function BlogDetailClient({ content, excerpt }: BlogDetailClientProps) {
     return (
         <div className="container mx-auto px-6 py-12 max-w-6xl">
             <div className="flex flex-col lg:flex-row gap-8">
-                {/* Sidebar TOC - Desktop - moved to left side */}
+                {/* Sidebar TOC - Desktop - independently scrollable */}
                 {content && (
                     <aside className="hidden lg:block w-64 shrink-0 order-first">
-                        <div className="sticky top-28">
+                        <div className="sticky top-28 max-h-[calc(100vh-8rem)] overflow-y-auto">
                             <TableOfContents className="shadow-sm" />
                         </div>
                     </aside>
