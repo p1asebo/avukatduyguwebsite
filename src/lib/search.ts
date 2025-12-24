@@ -24,69 +24,180 @@ export interface BlogPost {
 // Blog posts (newest first)
 export const blogPosts: BlogPost[] = [
     {
-        slug: "dugun-takilari-kimin-yargitay-2025-karari",
-        title: "Düğün Takıları Kime Ait? Yargıtay'ın 2025 \"Ezber Bozan\" Yeni Kriterleri",
-        excerpt: "Yargıtay 2025 yılında ziynet eşyası kararını değiştirdi! Erkeğe takılan altınlar artık kadının değil mi? Sandığa atılan takılar nasıl paylaşılır? Güncel içtihat analizi.",
+        slug: "yargitay-2024-ziynet-esyasi-ictihat-degisikligi",
+        title: "Yargıtay 2. Hukuk Dairesi'nin 2024 Ziynet Eşyası İçtihat Değişikliği ve Uygulama Rehberi",
+        excerpt: "Yargıtay'ın ziynet eşyaları konusundaki 2024 içtihadını, eski uygulamalarla karşılaştırarak inceleyen kapsamlı hukuki analiz. Mülkiyet hakkı, ispat yükü ve üçlü test kriterleri.",
         category: "Aile Hukuku",
         categorySlug: "aile-hukuku",
         date: "2024-12-24",
-        readTime: "7 dk",
-        tags: ["düğün takıları", "yargıtay ziynet kararı", "boşanmada altın paylaşımı", "ziynet eşyası"],
-        metaDescription: "Yargıtay 2025 yılında ziynet eşyası kararını değiştirdi! Erkeğe takılan altınlar artık kadının değil mi? Sandığa atılan takılar nasıl paylaşılır? Güncel içtihat analizi.",
+        readTime: "12 dk",
+        tags: ["ziynet eşyası", "yargıtay 2024", "boşanmada altın", "düğün takıları", "mülkiyet hakkı", "ispat yükü"],
+        metaDescription: "Yargıtay 2. Hukuk Dairesi'nin 2024 ziynet eşyası içtihat değişikliği. Düğün takılarının mülkiyeti, ispat yükü ve üçlü test kriterleri hakkında kapsamlı hukuki analiz.",
         thumbnail: "/images/blog/dugun-takilari.png",
-        views: 1247,
+        views: 2847,
         content: `
 <div class="summary-box">
-    <strong>🚀 1 Dakikada Özet (Vatandaş İçin Hızlı Cevap):</strong>
-    <p>Yargıtay'ın kökleşmiş "Kadına takılan da, erkeğe takılan da kadına aittir" görüşü <strong>DEĞİŞTİ.</strong></p>
-    <p>Yeni (2024-2025) uygulamaya göre kural şudur: <strong>"Kime takıldıysa onundur."</strong></p>
-    <ul>
-        <li><strong>Kadına takılanlar:</strong> Kadının.</li>
-        <li><strong>Erkeğe takılanlar:</strong> Erkeğin (Kadına özgü değilse).</li>
-        <li><strong>Ortak Sandık/Torba:</strong> Paylı (Ortak) mülkiyet.</li>
-    </ul>
+    <strong>📋 Makalenin Kapsamı</strong>
+    <p>Bu rehber, Yargıtay 2. Hukuk Dairesi'nin <strong>E. 2023/5704, K. 2024/2402</strong> sayılı kararı ile değişen ziynet eşyası içtihadını, eski uygulamalarla karşılaştırarak analiz etmektedir. Hedef kitle: Boşanma aşamasındaki bireyler, hukuki gelişmeleri takip eden vatandaşlar ve stajyer avukatlar.</p>
 </div>
 
-<p>Boşanma aşamasındaki çiftlerin en büyük anlaşmazlık konularından biri olan "ziynet eşyası alacağı" davalarında hukuki zemin 2024 yılı itibarıyla önemli bir değişime uğradı. Yıllardır uygulanan "Erkeğe takılan takılar da, kadına takılmış sayılır ve kadının kişisel malıdır" içtihadı, Yargıtay 2. Hukuk Dairesi'nin güncel kararlarıyla yerini çok daha detaylı bir ayrıma bıraktı.</p>
+<h2>A. Giriş: Hukuki Paradigma Değişimi</h2>
 
-<p>Peki, 2025 yılında boşanma davalarında düğün takıları nasıl paylaşılacak? "Sandık/Torba" detayı kararı nasıl etkiliyor? İşte Yargıtay Hukuk Genel Kurulu ve 2. Hukuk Dairesi'nin benimsediği yeni kriterler.</p>
+<p>Türk boşanma hukukunda uzun yıllar boyunca yerleşik bir anlayış hâkim olmuştur: <em>"Düğünde takılan her şey kadına aittir."</em> Bu anlayış, toplumsal kabul görmekle birlikte, mülkiyet hukukunun temel ilkeleriyle çatışma potansiyeli taşımaktaydı.</p>
 
-<h2>1. Adım: Anlaşma ve Örf Adet Var mı?</h2>
-<p>Mahkemeler ziynet eşyası paylaşımında öncelikle şu sırayı takip eder:</p>
-<ol>
-    <li><strong>Eşler Arası Anlaşma:</strong> Taraflar evlenirken veya sonrasında takıların kime ait olacağına dair yazılı veya sözlü (ispatlanmak kaydıyla) bir anlaşma yapmışsa, mahkeme bu anlaşmayı esas alır.</li>
-    <li><strong>Yerel Örf ve Adet:</strong> Anlaşma yoksa, düğünün yapıldığı yöredeki örf ve adete bakılır. Ancak bu adetlerin varlığını iddia eden tarafın bunu ispatlaması gerekir.</li>
-</ol>
+<p>2024 yılında Yargıtay 2. Hukuk Dairesi, <strong>E. 2023/5704, K. 2024/2402</strong> sayılı kararıyla bu yerleşik içtihadın revizyonuna gitti. Söz konusu kararın temel gerekçesi şu şekilde özetlenebilir:</p>
 
-<h2>2. Adım: "Kime Takıldıysa Onundur" İlkesi (Yeni Dönem)</h2>
-<p>Eğer anlaşma veya belirgin bir örf yoksa, Yargıtay'ın (E. 2023/5704, K. 2024/2402 sayılı kararı gibi) güncel içtihatları devreye girer. Eski uygulamanın aksine, artık cinsiyet ayrımı ve "takılan yer" hayati önem taşımaktadır.</p>
-
-<h3>Kadına Özgü Takılar (Bilezik, Kolye, Küpe)</h3>
-<p>Doğası gereği sadece kadının kullanabileceği ziynet eşyaları (bilezik, gerdanlık, küpe vb.) erkeğe takılmış olsa bile <strong>kadına ait sayılır.</strong> Burada bir değişiklik yoktur. Yargıtay, bu eşyaların erkeğin kullanımına uygun olmadığı gerekçesiyle kadının kişisel malı olduğunu kabul eder.</p>
-
-<h3>Erkeğe Takılan "Genel" Takılar (Çeyrek, Tam, Cumhuriyet Altını)</h3>
-<p>İşte en büyük değişiklik buradadır. Eskiden erkeğin yakasına takılan çeyrek altınlar bile "evin/kadının" sayılırdı. <strong>Yeni kararlara göre;</strong> erkeğe takılan ve "kadına özgü olmayan" takılar (çeyrek altın, yarım altın, tam altın, nakit para, saat vb.) artık <strong>ERKEĞE AİTTİR.</strong></p>
-<p><em>Önemli Not:</em> Bu kuralın uygulanabilmesi için düğün videoları ve fotoğraflarının bilirkişi tarafından incelenmesi ve takının bizzat erkeğin üstüne/yakasına takıldığının tespit edilmesi gerekir.</p>
-
-<h2>3. Kritik Detay: "Sandık ve Torba" Ayrımı</h2>
-<p>Düğünlerde takıların tek tek eşlerin üzerine takılmayıp, dolaştırılan bir "keseye", "sandığa" veya "torbaya" atılması durumu hukuki sonucu tamamen değiştirir.</p>
-
-<p>Yargıtay'ın bakış açısına göre:</p>
 <ul>
-    <li><strong>Kime takıldığı belli değilse:</strong> Takılar bir torbada toplandıysa ve kimin (gelinin tarafı mı, damadın tarafı mı) kime taktığı ayrıştırılamıyorsa,</li>
-    <li><strong>Ortak Mülkiyet:</strong> Bu takılar eşlerin <strong>"Paylı Mülkiyetinde" (Ortak)</strong> sayılır. Yani boşanma durumunda bu torbadaki altınlar yarı yarıya paylaşılır.</li>
+    <li><strong>Mülkiyet Hakkının Tespiti:</strong> Bir malın mülkiyetinin tespitinde, o malın fiilen kime verildiği veya teslim edildiği esas alınmalıdır.</li>
+    <li><strong>Güncel Yaşam Koşulları:</strong> Modern düğün organizasyonlarında takıların takılma biçimleri çeşitlenmiş olup, bu durumun hukuki değerlendirmede göz önünde bulundurulması gerekmektedir.</li>
+    <li><strong>Cinsiyet Ayrımı:</strong> Takının niteliği (kadına özgü, erkeğe özgü veya nötr) mülkiyet tespitinde belirleyici kriter olarak kabul edilmektedir.</li>
 </ul>
 
-<h2>Boşanma Davasında İspat Yükü Kimdedir?</h2>
-<p>Ziynet alacağı davasında kural şudur: "İddia eden ispatla mükelleftir."</p>
+<h2>B. Ziynet Mülkiyetinin Belirlenmesinde "Üçlü Test" (The Three-Step Test)</h2>
+
+<p>Güncel içtihada göre, ziynet eşyasının mülkiyetinin tespitinde aşağıdaki hiyerarşik değerlendirme uygulanmaktadır:</p>
+
+<h3>1. Birinci Öncelik: Eşler Arası Anlaşma</h3>
+<p>Tarafların evlilik öncesinde veya sırasında ziynet eşyalarının mülkiyetine ilişkin açık veya zımni bir anlaşma yapıp yapmadıkları araştırılır. Yazılı protokoller veya tanık beyanlarıyla ispat edilebilen sözlü anlaşmalar bu kapsamda değerlendirilir.</p>
+
+<h3>2. İkinci Öncelik: Yöresel Örf ve Adet</h3>
+<p>Anlaşmanın bulunmadığı hallerde, düğünün yapıldığı yörede geçerli olan örf ve adetlere başvurulur. Ancak bu noktada dikkat edilmesi gereken husus şudur: <em>Örf ve adetin varlığını iddia eden taraf, bu iddiasını ispatla yükümlüdür.</em></p>
+
+<h3>3. Üçüncü Öncelik: Genel Kural – "Kime Takıldıysa Onundur"</h3>
+<p>İlk iki kriter uygulanamadığında, Yargıtay'ın 2024 içtihadı devreye girer: <strong>Ziynet eşyası, fiziken kime takıldı veya kime teslim edildiyse, o kişinin kişisel malı olarak kabul edilir.</strong></p>
+
+<h2>C. Kritik Ayrım: Cinsiyet Özgülüğü ve Nötr Takılar</h2>
+
+<p>Ziynet eşyalarının mülkiyet tespitinde "takının niteliği" özel önem taşımaktadır. Bu bağlamda üç kategori söz konusudur:</p>
+
+<h3>Kadına Özgü Ziynet Eşyaları</h3>
+<p>Bilezik, kolye, küpe, gerdanlık, broş gibi doğası gereği yalnızca kadının kullanabileceği takılar bu kategoridedir. Bu eşyaların erkeğin koluna takılması veya erkeğin cebinde taşınması, mülkiyeti etkilememektedir. Yargıtay, bu tür eşyaların erkeğin kullanımına uygun olmadığı gerekçesiyle, <strong>daima kadının kişisel malı</strong> olduğuna hükmetmektedir.</p>
+
+<h3>Erkeğe Özgü Ziynet Eşyaları</h3>
+<p>Erkek kol saati, kol düğmesi, kravat iğnesi gibi doğası gereği yalnızca erkeğin kullanabileceği takılar erkeğe aittir.</p>
+
+<h3>Nötr (Unisex) Ziynet Eşyaları – En Önemli Kategori</h3>
+<p>Çeyrek altın, yarım altın, tam altın, Cumhuriyet altını, Reşat altını ve nakit para/döviz "nötr" kategoride yer almaktadır. <strong>2024 içtihadının getirdiği en önemli değişiklik bu kategoride gerçekleşmiştir:</strong></p>
+
 <ul>
-    <li><strong>Kadın eş:</strong> Takıların kendisine ait olduğunu veya erkeğin bu takıları alıp harcadığını ve geri vermediğini ispatlamalıdır.</li>
-    <li><strong>Erkek eş:</strong> Eğer takılar bozdurulduysa, bu paranın "evin ortak ihtiyaçlarına" veya "kadının rızasıyla geri alınmamak üzere" harcandığını ispatlamalıdır. Kadının rızasıyla bozdurulup evin ihtiyacına harcanan altınların iadesi gerekmez (Bağış sayılır), ancak ispat yükü erkektedir.</li>
+    <li>Bu eşyalar <strong>erkeğe takılmışsa → erkeğin kişisel malıdır</strong></li>
+    <li>Bu eşyalar <strong>kadına takılmışsa → kadının kişisel malıdır</strong></li>
 </ul>
 
-<h2>Sonuç Olarak</h2>
-<p>2025 yılına girerken düğün takıları davalarında "Kadın her şeyi alır" algısı hukuken sona ermiştir. Düğün videolarının saniye saniye incelendiği, "Kime takıldı?" ve "Torbaya mı atıldı?" sorularının cevabına göre milyonlarca liralık farkların oluştuğu bir dönemdeyiz. Hak kaybına uğramamak için sürecin tecrübeli bir avukatla yönetilmesi elzemdir.</p>
-        `,
+<p>Eski içtihadın aksine, damadın yakasına takılan çeyrek altınlar artık kadına ait sayılmamaktadır.</p>
+
+<h3>Karşılaştırmalı Tablo: 2024 İçtihadına Göre Mülkiyet Durumu</h3>
+
+<div class="table-responsive">
+<table>
+<thead>
+<tr>
+<th>Takı Türü</th>
+<th>Takılma Şekli / Yeri</th>
+<th>Mülkiyet (2024 İçtihadı)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bilezik</td>
+<td>Erkeğin koluna veya cebine</td>
+<td><strong>Kadın</strong> (Cinsiyete özgü)</td>
+</tr>
+<tr>
+<td>Çeyrek Altın</td>
+<td>Erkeğin yakasına</td>
+<td><strong>Erkek</strong> (Kime takıldıysa)</td>
+</tr>
+<tr>
+<td>Çeyrek Altın</td>
+<td>Gelinin kurdelesine</td>
+<td><strong>Kadın</strong> (Kime takıldıysa)</td>
+</tr>
+<tr>
+<td>Para / Döviz</td>
+<td>Ortak sandığa / torbaya</td>
+<td><strong>Paylı mülkiyet</strong> (Yarı yarıya)</td>
+</tr>
+<tr>
+<td>Tam Altın</td>
+<td>Erkeğin eline teslim</td>
+<td><strong>Erkek</strong></td>
+</tr>
+<tr>
+<td>Kolye</td>
+<td>Erkeğe verilmiş olsa dahi</td>
+<td><strong>Kadın</strong> (Cinsiyete özgü)</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<h2>D. "Takı Sandığı" (Torba/Kese) Durumu</h2>
+
+<p>Düğün organizasyonlarında takıların kişilerin üzerine tek tek takılmayıp, dolaştırılan bir kese, sandık veya torbaya atılması sıklıkla karşılaşılan bir uygulamadır. Bu durumun hukuki sonucu özel önem taşımaktadır.</p>
+
+<p><strong>Hukuki Değerlendirme:</strong></p>
+<ul>
+    <li>Takıların kime takıldığı tespit edilemiyorsa,</li>
+    <li>İçindeki nötr değerler (çeyrek altın, nakit para vb.) <strong>Paylı Mülkiyet (Ortak Mülkiyet)</strong> kapsamında değerlendirilir.</li>
+    <li>Boşanma durumunda bu torbadaki değerler <strong>eşit olarak paylaştırılır</strong>.</li>
+</ul>
+
+<p><em>Önemli:</em> Bu paylaşımın söz konusu olabilmesi için takıların gerçekten "ortak sandığa" atıldığının ve bireysel takım ayrımının yapılamadığının ispat edilmesi gerekmektedir.</p>
+
+<h2>E. İspat Yükü ve Deliller</h2>
+
+<h3>Olağan Akış İlkesi</h3>
+<p>Yargıtay'ın yerleşik uygulamasına göre, hayatın olağan akışı gereği ziynet eşyalarının kadının zilyetliğinde (uhdesinde) olduğu varsayılır. Kadın eş, takıların elinden alındığını veya zorla bozdurulduğunu iddia ediyorsa, <strong>bu iddiasını ispatla yükümlüdür</strong>.</p>
+
+<h3>Düğün Videoları ve Fotoğraflar</h3>
+<p>Güncel uygulamada en önemli ispat araçlarından biri düğün video kayıtlarıdır. Bilirkişiler bu görüntüleri inceleyerek:</p>
+<ul>
+    <li>Takının bizzat kime takıldığını,</li>
+    <li>Takının sandığa mı atıldığını yoksa kişiye mi verildiğini,</li>
+    <li>Takının niteliğini (kadına özgü mü, nötr mü)</li>
+</ul>
+<p>tespit etmektedir.</p>
+
+<h3>"Geri Verdim" Savunması</h3>
+<p>Erkek eşin "takıları aldım ancak geri verdim" şeklinde savunma yapması halinde, <strong>ispat yükü erkeğe geçer</strong>. Erkeğin bu savunmasını destekler delil sunması gerekmektedir.</p>
+
+<h2>F. Zamanaşımı ve Dava Türleri</h2>
+
+<h3>Aynen İade (İstihkak) Davası</h3>
+<p>Ziynet eşyasının aynen iadesi talep ediliyorsa, bu talep mülkiyet hakkına dayandığından <strong>zamanaşımına tabi değildir</strong>. Mülkiyet hakkının zaman aşımına uğramayacağı evrensel bir hukuk ilkesidir.</p>
+
+<h3>Bedel İadesi (Tazminat) Davası</h3>
+<p>Ziynet eşyasının bedelinin ödenmesi talep ediliyorsa, boşanma kararının kesinleşmesinden itibaren <strong>10 yıllık genel zamanaşımı süresi</strong> uygulanır.</p>
+
+<h2>G. Örnek Senaryolar (Somut Olay Değerlendirmeleri)</h2>
+
+<div class="summary-box">
+    <strong>Senaryo 1: Damada Takılan Çeyrek Altınlar</strong>
+    <p><em>Durum:</em> Düğünde damadın yakasına 20 adet çeyrek altın takılmıştır.</p>
+    <p><em>Sonuç:</em> 2024 içtihadına göre bu altınlar <strong>damadın kişisel malıdır</strong>. Çeyrek altın "nötr" kategoride olup, kime takıldıysa ona aittir.</p>
+</div>
+
+<div class="summary-box">
+    <strong>Senaryo 2: Damada Takılan Bilezik</strong>
+    <p><em>Durum:</em> Damadın annesi, damadın koluna bir "Trabzon Hasır Bilezik" takmıştır.</p>
+    <p><em>Sonuç:</em> Bilezik kadına özgü bir takı olduğundan, erkeğe takılmış olsa dahi <strong>kadının kişisel malıdır</strong>.</p>
+</div>
+
+<div class="summary-box">
+    <strong>Senaryo 3: Ortak Torbadaki Paralar</strong>
+    <p><em>Durum:</em> Düğünde takılan paralar bir torbada toplanmış, sonrasında erkek tarafından araç alımında kullanılmıştır.</p>
+    <p><em>Sonuç:</em> Paralar ortak torbaya atıldığından <strong>paylı mülkiyet</strong> kapsamındadır. Erkek, kadının payını (yarısını) iade etmekle yükümlüdür.</p>
+</div>
+
+<h2>Sonuç</h2>
+
+<p>Yargıtay 2. Hukuk Dairesi'nin 2024 yılındaki içtihat değişikliği, ziynet eşyası davalarında önemli bir paradigma dönüşümünü temsil etmektedir. "Düğünde takılan her şey kadına aittir" şeklindeki geleneksel anlayış yerini, mülkiyet hukukunun temel ilkelerine dayanan daha detaylı bir değerlendirme sistemine bırakmıştır.</p>
+
+<p>Her davanın kendine özgü koşulları bulunmakta olup, somut olayın özelliklerine göre farklı sonuçlara ulaşılması mümkündür. Hukuki süreçlerin hak kayıplarına yol açmaması adına, konunun avukat marifetiyle değerlendirilmesi tavsiye edilmektedir.</p>
+
+<p><em>Bu makale genel bilgilendirme amaçlı hazırlanmış olup, hukuki mütalaa niteliği taşımamaktadır.</em></p>
+`,
     },
     {
         slug: "anlasmali-bosanma-protokolu",
