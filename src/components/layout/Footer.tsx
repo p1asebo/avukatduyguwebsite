@@ -11,8 +11,13 @@ export default function Footer() {
                 <div className="xl:grid xl:grid-cols-3 xl:gap-8">
                     <div className="space-y-8">
                         <div className="flex items-center gap-3">
-                            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-600 text-white font-bold text-lg">
-                                D
+                            <div className="relative h-10 w-10 rounded-full overflow-hidden bg-white shrink-0">
+                                <Image
+                                    src="/logo.png"
+                                    alt="Logo"
+                                    fill
+                                    className="object-cover scale-110"
+                                />
                             </div>
                             <span className="text-xl font-bold">Av. Duygu Sultan Açıkgöz Işık</span>
                         </div>
