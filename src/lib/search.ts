@@ -15,10 +15,75 @@ export interface BlogPost {
     date: string;
     readTime: string;
     tags?: string[];
+    metaDescription?: string;
+    content?: string;
 }
 
-// Sample blog posts (will be replaced with MDX content later)
+// Blog posts (newest first)
 export const blogPosts: BlogPost[] = [
+    {
+        slug: "dugun-takilari-kimin-yargitay-2025-karari",
+        title: "Düğün Takıları Kime Ait? Yargıtay'ın 2025 \"Ezber Bozan\" Yeni Kriterleri",
+        excerpt: "Yargıtay 2025 yılında ziynet eşyası kararını değiştirdi! Erkeğe takılan altınlar artık kadının değil mi? Sandığa atılan takılar nasıl paylaşılır? Güncel içtihat analizi.",
+        category: "Aile Hukuku",
+        categorySlug: "aile-hukuku",
+        date: "2024-12-24",
+        readTime: "7 dk",
+        tags: ["düğün takıları", "yargıtay ziynet kararı", "boşanmada altın paylaşımı", "ziynet eşyası"],
+        metaDescription: "Yargıtay 2025 yılında ziynet eşyası kararını değiştirdi! Erkeğe takılan altınlar artık kadının değil mi? Sandığa atılan takılar nasıl paylaşılır? Güncel içtihat analizi.",
+        content: `
+<div class="summary-box">
+    <strong>🚀 1 Dakikada Özet (Vatandaş İçin Hızlı Cevap):</strong>
+    <p>Yargıtay'ın kökleşmiş "Kadına takılan da, erkeğe takılan da kadına aittir" görüşü <strong>DEĞİŞTİ.</strong></p>
+    <p>Yeni (2024-2025) uygulamaya göre kural şudur: <strong>"Kime takıldıysa onundur."</strong></p>
+    <ul>
+        <li><strong>Kadına takılanlar:</strong> Kadının.</li>
+        <li><strong>Erkeğe takılanlar:</strong> Erkeğin (Kadına özgü değilse).</li>
+        <li><strong>Ortak Sandık/Torba:</strong> Paylı (Ortak) mülkiyet.</li>
+    </ul>
+</div>
+
+<p>Boşanma aşamasındaki çiftlerin en büyük anlaşmazlık konularından biri olan "ziynet eşyası alacağı" davalarında hukuki zemin 2024 yılı itibarıyla önemli bir değişime uğradı. Yıllardır uygulanan "Erkeğe takılan takılar da, kadına takılmış sayılır ve kadının kişisel malıdır" içtihadı, Yargıtay 2. Hukuk Dairesi'nin güncel kararlarıyla yerini çok daha detaylı bir ayrıma bıraktı.</p>
+
+<p>Peki, 2025 yılında boşanma davalarında düğün takıları nasıl paylaşılacak? "Sandık/Torba" detayı kararı nasıl etkiliyor? İşte Yargıtay Hukuk Genel Kurulu ve 2. Hukuk Dairesi'nin benimsediği yeni kriterler.</p>
+
+<h2>1. Adım: Anlaşma ve Örf Adet Var mı?</h2>
+<p>Mahkemeler ziynet eşyası paylaşımında öncelikle şu sırayı takip eder:</p>
+<ol>
+    <li><strong>Eşler Arası Anlaşma:</strong> Taraflar evlenirken veya sonrasında takıların kime ait olacağına dair yazılı veya sözlü (ispatlanmak kaydıyla) bir anlaşma yapmışsa, mahkeme bu anlaşmayı esas alır.</li>
+    <li><strong>Yerel Örf ve Adet:</strong> Anlaşma yoksa, düğünün yapıldığı yöredeki örf ve adete bakılır. Ancak bu adetlerin varlığını iddia eden tarafın bunu ispatlaması gerekir.</li>
+</ol>
+
+<h2>2. Adım: "Kime Takıldıysa Onundur" İlkesi (Yeni Dönem)</h2>
+<p>Eğer anlaşma veya belirgin bir örf yoksa, Yargıtay'ın (E. 2023/5704, K. 2024/2402 sayılı kararı gibi) güncel içtihatları devreye girer. Eski uygulamanın aksine, artık cinsiyet ayrımı ve "takılan yer" hayati önem taşımaktadır.</p>
+
+<h3>Kadına Özgü Takılar (Bilezik, Kolye, Küpe)</h3>
+<p>Doğası gereği sadece kadının kullanabileceği ziynet eşyaları (bilezik, gerdanlık, küpe vb.) erkeğe takılmış olsa bile <strong>kadına ait sayılır.</strong> Burada bir değişiklik yoktur. Yargıtay, bu eşyaların erkeğin kullanımına uygun olmadığı gerekçesiyle kadının kişisel malı olduğunu kabul eder.</p>
+
+<h3>Erkeğe Takılan "Genel" Takılar (Çeyrek, Tam, Cumhuriyet Altını)</h3>
+<p>İşte en büyük değişiklik buradadır. Eskiden erkeğin yakasına takılan çeyrek altınlar bile "evin/kadının" sayılırdı. <strong>Yeni kararlara göre;</strong> erkeğe takılan ve "kadına özgü olmayan" takılar (çeyrek altın, yarım altın, tam altın, nakit para, saat vb.) artık <strong>ERKEĞE AİTTİR.</strong></p>
+<p><em>Önemli Not:</em> Bu kuralın uygulanabilmesi için düğün videoları ve fotoğraflarının bilirkişi tarafından incelenmesi ve takının bizzat erkeğin üstüne/yakasına takıldığının tespit edilmesi gerekir.</p>
+
+<h2>3. Kritik Detay: "Sandık ve Torba" Ayrımı</h2>
+<p>Düğünlerde takıların tek tek eşlerin üzerine takılmayıp, dolaştırılan bir "keseye", "sandığa" veya "torbaya" atılması durumu hukuki sonucu tamamen değiştirir.</p>
+
+<p>Yargıtay'ın bakış açısına göre:</p>
+<ul>
+    <li><strong>Kime takıldığı belli değilse:</strong> Takılar bir torbada toplandıysa ve kimin (gelinin tarafı mı, damadın tarafı mı) kime taktığı ayrıştırılamıyorsa,</li>
+    <li><strong>Ortak Mülkiyet:</strong> Bu takılar eşlerin <strong>"Paylı Mülkiyetinde" (Ortak)</strong> sayılır. Yani boşanma durumunda bu torbadaki altınlar yarı yarıya paylaşılır.</li>
+</ul>
+
+<h2>Boşanma Davasında İspat Yükü Kimdedir?</h2>
+<p>Ziynet alacağı davasında kural şudur: "İddia eden ispatla mükelleftir."</p>
+<ul>
+    <li><strong>Kadın eş:</strong> Takıların kendisine ait olduğunu veya erkeğin bu takıları alıp harcadığını ve geri vermediğini ispatlamalıdır.</li>
+    <li><strong>Erkek eş:</strong> Eğer takılar bozdurulduysa, bu paranın "evin ortak ihtiyaçlarına" veya "kadının rızasıyla geri alınmamak üzere" harcandığını ispatlamalıdır. Kadının rızasıyla bozdurulup evin ihtiyacına harcanan altınların iadesi gerekmez (Bağış sayılır), ancak ispat yükü erkektedir.</li>
+</ul>
+
+<h2>Sonuç Olarak</h2>
+<p>2025 yılına girerken düğün takıları davalarında "Kadın her şeyi alır" algısı hukuken sona ermiştir. Düğün videolarının saniye saniye incelendiği, "Kime takıldı?" ve "Torbaya mı atıldı?" sorularının cevabına göre milyonlarca liralık farkların oluştuğu bir dönemdeyiz. Hak kaybına uğramamak için sürecin tecrübeli bir avukatla yönetilmesi elzemdir.</p>
+        `,
+    },
     {
         slug: "anlasmali-bosanma-protokolu",
         title: "Anlaşmalı Boşanma Protokolü Nasıl Hazırlanır?",
@@ -100,6 +165,13 @@ export const blogPosts: BlogPost[] = [
         tags: ["ceza davası", "savunma", "tutukluluk"],
     },
 ];
+
+/**
+ * Get a single blog post by slug
+ */
+export function getPostBySlug(slug: string): BlogPost | undefined {
+    return blogPosts.find(p => p.slug === slug);
+}
 
 // Turkish character normalization map
 const turkishMap: Record<string, string> = {
