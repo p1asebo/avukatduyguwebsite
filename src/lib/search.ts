@@ -17,6 +17,8 @@ export interface BlogPost {
     tags?: string[];
     metaDescription?: string;
     content?: string;
+    thumbnail?: string;
+    views?: number;
 }
 
 // Blog posts (newest first)
@@ -31,6 +33,8 @@ export const blogPosts: BlogPost[] = [
         readTime: "7 dk",
         tags: ["düğün takıları", "yargıtay ziynet kararı", "boşanmada altın paylaşımı", "ziynet eşyası"],
         metaDescription: "Yargıtay 2025 yılında ziynet eşyası kararını değiştirdi! Erkeğe takılan altınlar artık kadının değil mi? Sandığa atılan takılar nasıl paylaşılır? Güncel içtihat analizi.",
+        thumbnail: "/images/blog/dugun-takilari.png",
+        views: 1247,
         content: `
 <div class="summary-box">
     <strong>🚀 1 Dakikada Özet (Vatandaş İçin Hızlı Cevap):</strong>

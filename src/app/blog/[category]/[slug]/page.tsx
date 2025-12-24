@@ -1,8 +1,10 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { ArrowLeft, Calendar, Clock, Tag, User, Share2 } from "lucide-react";
+import Image from "next/image";
+import { ArrowLeft, Calendar, Clock, Tag, User, Eye } from "lucide-react";
 import { blogPosts, getPostBySlug } from "@/lib/search";
+import { BlogDetailClient } from "./BlogDetailClient";
 
 // Generate static params for all blog posts
 export function generateStaticParams() {
@@ -134,31 +136,24 @@ export default async function BlogPostPage({
                                 <Clock className="h-4 w-4" />
                                 <span>{post.readTime} okuma</span>
                             </div>
+                            {post.views && (
+                                <div className="flex items-center gap-2">
+                                    <Eye className="h-4 w-4" />
+                                    <span>{post.views.toLocaleString("tr-TR")} görüntülenme</span>
+                                </div>
+                            )}
                         </div>
                     </div>
                 </div>
 
-                {/* Content */}
-                <div className="container mx-auto px-6 py-12 max-w-4xl">
-                    {post.content ? (
-                        <div
-                            className="blog-content"
-                            dangerouslySetInnerHTML={{ __html: post.content }}
-                        />
-                    ) : (
-                        <div>
-                            <p className="text-lg text-slate-600 leading-relaxed">
-                                {post.excerpt}
-                            </p>
-                            <p className="text-slate-500 mt-8 italic">
-                                Bu makalenin tam içeriği yakında eklenecektir.
-                            </p>
-                        </div>
-                    )}
+                {/* Content with TOC */}
+                <BlogDetailClient content={post.content} excerpt={post.excerpt} />
 
+                {/* Bottom sections container */}
+                <div className="container mx-auto px-6 max-w-4xl pb-16">
                     {/* Tags */}
                     {post.tags && post.tags.length > 0 && (
-                        <div className="mt-12 pt-8 border-t border-slate-200">
+                        <div className="pt-8 border-t border-slate-200">
                             <h3 className="text-sm font-semibold text-slate-500 uppercase mb-3">Etiketler</h3>
                             <div className="flex flex-wrap gap-2">
                                 {post.tags.map((tag, i) => (
@@ -202,3 +197,4 @@ export default async function BlogPostPage({
         </>
     );
 }
+

@@ -2,7 +2,8 @@
 
 import { useState, useMemo } from "react";
 import Link from "next/link";
-import { Search, Tag, Calendar, Clock, AlertCircle } from "lucide-react";
+import Image from "next/image";
+import { Search, Tag, Calendar, Clock, AlertCircle, Eye } from "lucide-react";
 import { Card } from "@/components/ui/Card";
 import { searchBlog, getCategories, type BlogPost } from "@/lib/search";
 
@@ -101,14 +102,23 @@ export default function BlogPage() {
                                 <div className="grid md:grid-cols-2 gap-8">
                                     {searchResult.posts.slice(0, 2).map((post) => (
                                         <Link key={post.slug} href={`/blog/${post.categorySlug}/${post.slug}`}>
-                                            <Card className="hover:shadow-lg cursor-pointer bg-white group">
-                                                <div className="h-48 bg-gradient-to-br from-blue-500 to-blue-700 rounded-lg mb-4 flex items-center justify-center">
-                                                    <span className="text-white/70 text-lg font-medium">{post.category}</span>
+                                            <Card className="hover:shadow-lg cursor-pointer bg-white group overflow-hidden">
+                                                <div className="h-48 bg-gradient-to-br from-blue-500 to-blue-700 rounded-lg mb-4 flex items-center justify-center relative overflow-hidden">
+                                                    {post.thumbnail ? (
+                                                        <Image
+                                                            src={post.thumbnail}
+                                                            alt={post.title}
+                                                            fill
+                                                            className="object-cover group-hover:scale-105 transition-transform duration-300"
+                                                        />
+                                                    ) : (
+                                                        <span className="text-white/70 text-lg font-medium">{post.category}</span>
+                                                    )}
                                                 </div>
                                                 <h3 className="text-xl font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">
                                                     {post.title}
                                                 </h3>
-                                                <p className="text-slate-600">{post.excerpt}</p>
+                                                <p className="text-slate-600 line-clamp-2">{post.excerpt}</p>
                                                 <div className="flex items-center gap-4 mt-4 text-sm text-slate-500">
                                                     <span className="flex items-center gap-1">
                                                         <Calendar className="h-4 w-4" />
@@ -118,6 +128,12 @@ export default function BlogPage() {
                                                         <Clock className="h-4 w-4" />
                                                         {post.readTime}
                                                     </span>
+                                                    {post.views && (
+                                                        <span className="flex items-center gap-1">
+                                                            <Eye className="h-4 w-4" />
+                                                            {post.views.toLocaleString("tr-TR")}
+                                                        </span>
+                                                    )}
                                                 </div>
                                             </Card>
                                         </Link>
