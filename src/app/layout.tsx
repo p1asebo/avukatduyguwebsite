@@ -22,7 +22,7 @@ export const metadata: Metadata = {
         default: "Av. Duygu Sultan Açıkgöz Işık | Denizli Avukat",
         template: "%s | Av. Duygu Sultan Açıkgöz Işık",
     },
-    description: "Denizli'de Aile, İcra, Miras ve Ceza Hukuku alanlarında uzman avukatlık bürosu. Profesyonel hukuki danışmanlık için hemen iletişime geçin.",
+    description: "Denizli'de Aile, İcra, Miras ve Ceza Hukuku alanlarında avukatlık hizmeti sunan hukuk bürosu.",
     keywords: ["denizli avukat", "boşanma avukatı", "icra avukatı", "miras avukatı", "ceza avukatı"],
     authors: [{ name: "Av. Duygu Sultan Açıkgöz Işık" }],
     creator: "Av. Duygu Sultan Açıkgöz Işık",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     },
     openGraph: {
         title: "Av. Duygu Sultan Açıkgöz Işık | Denizli Avukat",
-        description: "Denizli'de Aile, İcra, Miras ve Ceza Hukuku alanlarında uzman avukatlık bürosu.",
+        description: "Denizli'de Aile, İcra, Miras ve Ceza Hukuku alanlarında avukatlık hizmeti.",
         url: "https://avukatduygu.com",
         siteName: "Av. Duygu Sultan Açıkgöz Işık",
         locale: "tr_TR",

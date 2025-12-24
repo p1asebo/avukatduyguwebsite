@@ -8,7 +8,7 @@ import type { Metadata } from "next";
 
 const BASE_URL = "https://avukatduygu.com";
 const SITE_NAME = "Av. Duygu Sultan Açıkgöz Işık";
-const DEFAULT_DESCRIPTION = "Denizli'de Aile, İcra, Miras ve Ceza Hukuku alanlarında uzman avukatlık bürosu. Profesyonel hukuki danışmanlık için hemen iletişime geçin.";
+const DEFAULT_DESCRIPTION = "Denizli'de Aile, İcra, Miras ve Ceza Hukuku alanlarında avukatlık hizmeti sunan hukuk bürosu.";
 
 interface PageSEOConfig {
     title: string;
@@ -88,15 +88,15 @@ export const pageSEO = {
 
     about: generatePageMetadata({
         title: "Hakkımda | Av. Duygu Sultan Açıkgöz Işık | Denizli Avukat",
-        description: "Av. Duygu Sultan Açıkgöz Işık hakkında detaylı bilgi. Denizli Barosu'na kayıtlı, Aile ve Ceza Hukuku alanlarında uzman avukat.",
+        description: "Av. Duygu Sultan Açıkgöz Işık hakkında detaylı bilgi. Denizli Barosu'na kayıtlı avukat.",
         path: "/hakkimda",
-        keywords: ["denizli avukat", "aile hukuku uzmanı", "ceza avukatı"],
+        keywords: ["denizli avukat", "aile hukuku avukatı", "ceza avukatı"],
     }),
 
     practiceAreas: generatePageMetadata({
-        title: "Uzmanlık Alanları | Denizli Boşanma, İcra, Miras Avukatı",
+        title: "Faaliyet Alanları | Denizli Boşanma, İcra, Miras Avukatı",
         description: "Aile Hukuku, İcra Hukuku, Miras Hukuku, Ceza Hukuku, İş Hukuku ve Ticaret Hukuku alanlarında profesyonel avukatlık hizmeti.",
-        path: "/uzmanlik-alanlari",
+        path: "/faaliyet-alanlari",
         keywords: ["boşanma avukatı", "icra avukatı", "miras avukatı", "ceza avukatı", "iş avukatı"],
     }),
 

@@ -24,11 +24,11 @@ export default function Home() {
                         <span className="text-sm not-italic mt-2 block font-sans text-slate-500">- Marcus Tullius Cicero</span>
                     </p>
                     <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-                        <Button size="lg" href="/iletisim">
-                            Ücretsiz Ön Görüşme
+                        <Button size="lg" href="/hakkimda">
+                            Hakkımda
                         </Button>
-                        <Button variant="outline" size="lg" href="/uzmanlik-alanlari">
-                            Uzmanlık Alanlarımız
+                        <Button variant="outline" size="lg" href="/faaliyet-alanlari">
+                            Faaliyet Alanları
                         </Button>
                     </div>
                 </div>
@@ -38,10 +38,7 @@ export default function Home() {
             <section className="py-24 bg-white">
                 <div className="container mx-auto px-6">
                     <div className="mb-16 text-center">
-                        <h2 className="text-3xl font-bold text-slate-900 sm:text-4xl">Uzmanlık Alanları</h2>
-                        <p className="mt-4 text-lg text-slate-600">
-                            Size en iyi hizmeti sunmak için odaklandığımız temel hukuk dalları.
-                        </p>
+                        <h2 className="text-3xl font-bold text-slate-900 sm:text-4xl">Faaliyet Alanları</h2>
                     </div>
 
                     <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
@@ -57,7 +54,7 @@ export default function Home() {
                                 </div>
                                 <h3 className="mb-3 text-xl font-bold text-slate-900">{item.title}</h3>
                                 <p className="text-slate-600">{item.desc}</p>
-                                <Link href="/uzmanlik-alanlari" className="mt-4 inline-flex items-center text-sm font-semibold text-blue-600 hover:text-blue-700">
+                                <Link href="/faaliyet-alanlari" className="mt-4 inline-flex items-center text-sm font-semibold text-blue-600 hover:text-blue-700">
                                     Devamını Oku <ArrowRight className="ml-1 h-4 w-4" />
                                 </Link>
                             </Card>

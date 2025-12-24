@@ -9,7 +9,7 @@ import { cn } from "@/lib/utils";
 const navigation = [
     { name: "Anasayfa", href: "/" },
     { name: "Hakkımda", href: "/hakkimda" },
-    { name: "Uzmanlık Alanları", href: "/uzmanlik-alanlari" },
+    { name: "Faaliyet Alanları", href: "/faaliyet-alanlari" },
     { name: "Blog", href: "/blog" },
     { name: "Hesaplama", href: "/hesaplama" },
     { name: "İletişim", href: "/iletisim" },

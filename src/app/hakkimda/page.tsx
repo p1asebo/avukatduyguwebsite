@@ -36,9 +36,6 @@ export default function AboutPage() {
                             </ul>
                         </div>
 
-                        <div className="pt-8">
-                            <Button href="/iletisim">Hemen İletişime Geçin</Button>
-                        </div>
                     </div>
                 </div>
             </div>

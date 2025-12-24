@@ -29,7 +29,7 @@ export interface FAQItem {
 
 const defaultAttorney: AttorneyInfo = {
     name: "Av. Duygu Sultan Açıkgöz Işık",
-    description: "Denizli'de Aile, İcra, Miras ve Ceza Hukuku alanlarında uzman avukatlık hizmeti sunan hukuk bürosu.",
+    description: "Denizli'de Aile, İcra, Miras ve Ceza Hukuku alanlarında avukatlık hizmeti sunan hukuk bürosu.",
     telephone: "+90 258 123 45 67",
     email: "info@avukatduygu.com",
     address: {
@@ -222,7 +222,7 @@ export function generateWebsiteSchema() {
             "@id": "https://avukatduygu.com/#website",
             url: "https://avukatduygu.com",
             name: "Av. Duygu Sultan Açıkgöz Işık | Denizli Avukat",
-            description: "Denizli'de Aile, İcra, Miras ve Ceza Hukuku alanlarında uzman avukatlık bürosu.",
+            description: "Denizli'de Aile, İcra, Miras ve Ceza Hukuku alanlarında avukatlık hizmeti sunan hukuk bürosu.",
             publisher: {
                 "@id": "https://avukatduygu.com/#legalservice",
             },

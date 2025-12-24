@@ -11,14 +11,11 @@ export default function Footer() {
                 <div className="xl:grid xl:grid-cols-3 xl:gap-8">
                     <div className="space-y-8">
                         <div className="flex items-center gap-3">
-                            <div className="relative h-10 w-10 bg-white rounded-full p-1">
-                                <Image src="/logo.png" alt="Logo" fill className="object-contain p-1" />
+                            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-600 text-white font-bold text-lg">
+                                D
                             </div>
                             <span className="text-xl font-bold">Av. Duygu Sultan Açıkgöz Işık</span>
                         </div>
-                        <p className="text-sm leading-6 text-slate-300 max-w-sm">
-                            Hukuk, adaletin sanatıdır. Denizli'de profesyonel hukuki danışmanlık ve avukatlık hizmetleri.
-                        </p>
                         <div className="text-sm text-slate-400">
                             <p>Adalet Mah. 10043. Sok. No:1</p>
                             <p>Merkezefendi / Denizli</p>
@@ -40,8 +37,8 @@ export default function Footer() {
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link href="/uzmanlik-alanlari" className="text-sm leading-6 text-slate-300 hover:text-white">
-                                            Uzmanlık Alanları
+                                        <Link href="/faaliyet-alanlari" className="text-sm leading-6 text-slate-300 hover:text-white">
+                                            Faaliyet Alanları
                                         </Link>
                                     </li>
                                     <li>

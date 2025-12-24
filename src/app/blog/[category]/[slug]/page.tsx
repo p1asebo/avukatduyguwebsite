@@ -178,20 +178,6 @@ export default async function BlogPostPage({
                             İçerikteki bilgilere dayanılarak yapılan işlemlerden doğacak sonuçlardan sorumluluk kabul edilmez.
                         </p>
                     </div>
-
-                    {/* Share & CTA */}
-                    <div className="mt-12 flex flex-col md:flex-row items-center justify-between gap-6 p-8 bg-slate-50 rounded-2xl">
-                        <div>
-                            <h3 className="text-xl font-bold text-slate-900 mb-2">Bu konuda danışmanlık almak ister misiniz?</h3>
-                            <p className="text-slate-600">Uzman avukat desteği için hemen iletişime geçin.</p>
-                        </div>
-                        <Link
-                            href="/iletisim"
-                            className="bg-blue-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-blue-700 transition-colors whitespace-nowrap"
-                        >
-                            Randevu Al
-                        </Link>
-                    </div>
                 </div>
             </article>
         </>

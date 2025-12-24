@@ -15,9 +15,9 @@ export default function PracticeAreasPage() {
         <div className="bg-slate-50 py-16 pt-28">
             <div className="container mx-auto px-6">
                 <div className="mb-16 text-center">
-                    <h1 className="text-4xl font-bold text-slate-900 font-playfair">Uzmanlık Alanlarımız</h1>
+                    <h1 className="text-4xl font-bold text-slate-900 font-playfair">Faaliyet Alanlarımız</h1>
                     <p className="mt-4 text-lg text-slate-600 max-w-2xl mx-auto">
-                        Hukuki sorunlarınıza profesyonel ve sonuç odaklı çözümler sunuyoruz.
+                        Hukuki süreçlerinizde profesyonel desteğe ihtiyaç duyabileceğiniz temel alanlar.
                     </p>
                 </div>
 

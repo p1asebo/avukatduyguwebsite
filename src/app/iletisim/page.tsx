@@ -131,7 +131,7 @@ export default function ContactPage() {
 
                     {/* Contact Form */}
                     <div className="bg-slate-50 p-8 rounded-3xl border border-slate-100 shadow-sm">
-                        <h2 className="text-2xl font-bold text-slate-900 mb-6">Randevu Formu</h2>
+                        <h2 className="text-2xl font-bold text-slate-900 mb-6">İletişim Formu</h2>
 
                         {isSubmitted ? (
                             <div className="flex flex-col items-center justify-center py-12 text-center">
