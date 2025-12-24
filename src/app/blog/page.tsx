@@ -25,6 +25,32 @@ export default function BlogPage() {
         );
     }, [searchResult.posts]);
 
+    // Featured posts algorithm: combines views + recency for popularity score
+    const featuredPosts = useMemo(() => {
+        const now = new Date().getTime();
+        const oneWeekMs = 7 * 24 * 60 * 60 * 1000;
+
+        return [...searchResult.posts]
+            .map(post => {
+                const postDate = new Date(post.date).getTime();
+                const ageInWeeks = (now - postDate) / oneWeekMs;
+
+                // Base score from views (default 0 if no views)
+                const viewScore = post.views || 0;
+
+                // Recency boost: newer posts get higher multiplier (1.5x for today, decreasing over time)
+                // Formula: max(0.5, 1.5 - (ageInWeeks * 0.1))
+                const recencyMultiplier = Math.max(0.5, 1.5 - (ageInWeeks * 0.1));
+
+                // Final popularity score
+                const popularityScore = viewScore * recencyMultiplier;
+
+                return { ...post, popularityScore };
+            })
+            .sort((a, b) => b.popularityScore - a.popularityScore)
+            .slice(0, 2); // Top 2 featured posts
+    }, [searchResult.posts]);
+
     // Pagination logic
     const totalPages = Math.ceil(sortedPosts.length / POSTS_PER_PAGE);
     const paginatedPosts = sortedPosts.slice(
@@ -118,7 +144,7 @@ export default function BlogPage() {
                                     Öne Çıkan Yazılar
                                 </h2>
                                 <div className="grid md:grid-cols-2 gap-8">
-                                    {sortedPosts.slice(0, 2).map((post) => (
+                                    {featuredPosts.map((post) => (
                                         <Link key={post.slug} href={`/blog/${post.categorySlug}/${post.slug}`}>
                                             <Card className="hover:shadow-lg cursor-pointer bg-white group overflow-hidden">
                                                 <div className="h-48 bg-gradient-to-br from-blue-500 to-blue-700 rounded-lg mb-4 flex items-center justify-center relative overflow-hidden">
@@ -220,8 +246,8 @@ export default function BlogPage() {
                                         key={page}
                                         onClick={() => setCurrentPage(page)}
                                         className={`w-10 h-10 rounded-lg font-medium ${currentPage === page
-                                                ? "bg-blue-600 text-white"
-                                                : "bg-white border border-slate-200 text-slate-600 hover:bg-slate-50"
+                                            ? "bg-blue-600 text-white"
+                                            : "bg-white border border-slate-200 text-slate-600 hover:bg-slate-50"
                                             }`}
                                     >
                                         {page}
