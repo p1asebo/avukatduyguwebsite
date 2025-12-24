@@ -43,20 +43,40 @@ export default function Home() {
 
                     <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
                         {[
-                            { title: "Aile Hukuku", icon: Shield, desc: "Boşanma, velayet ve nafaka davalarında yanınızdayız." },
-                            { title: "İcra Hukuku", icon: Scale, desc: "Alacak tahsili ve icra takiplerinde hızlı çözümler." },
-                            { title: "Miras Hukuku", icon: BookOpen, desc: "Veraset, vasiyetname ve miras paylaşımı süreçleri." },
-                            { title: "Ceza Hukuku", icon: Gavel, desc: "Soruşturma ve kovuşturma aşamalarında etkili savunma." },
+                            {
+                                title: "Aile Hukuku",
+                                icon: Shield,
+                                shortDesc: "Boşanma, velayet, nafaka ve mal rejimi.",
+                                fullDesc: "Boşanma davaları, velayet ve kişisel ilişki düzenlenmesi, iştirak ve yoksulluk nafakası, edinilmiş mallara katılma rejimi, aile içi şiddet koruma tedbirleri."
+                            },
+                            {
+                                title: "İcra Hukuku",
+                                icon: Scale,
+                                shortDesc: "Alacak tahsili ve icra takipleri.",
+                                fullDesc: "Kambiyo senedi (bono, çek) takipleri, ilamsız ve ilamlı icra işlemleri, haciz ve tahliye davaları, itirazların iptali, borçlu ve alacaklı vekilliği."
+                            },
+                            {
+                                title: "Miras Hukuku",
+                                icon: BookOpen,
+                                shortDesc: "Veraset, vasiyetname ve miras paylaşımı.",
+                                fullDesc: "Veraset ilamı alınması, vasiyetname hazırlama ve itiraz davaları, tenkis ve mirasın reddi, ortaklığın giderilmesi (izale-i şüyû), miras tasfiyesi."
+                            },
+                            {
+                                title: "Ceza Hukuku",
+                                icon: Gavel,
+                                shortDesc: "Soruşturma ve kovuşturma aşamaları.",
+                                fullDesc: "Ağır ceza ve asliye ceza mahkemelerinde müdafilik, mağdur vekilliği, tutuklama ve tahliye işlemleri, ceza indirimi ve etkin pişmanlık dava süreçleri."
+                            },
                         ].map((item, i) => (
-                            <Card key={i} className="group hover:-translate-y-1 hover:shadow-xl hover:border-blue-100">
+                            <Card key={i} className="group hover:-translate-y-2 hover:shadow-2xl hover:bg-slate-900 transition-all duration-300 cursor-pointer">
                                 <div className="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-blue-50 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors">
                                     <item.icon className="h-6 w-6" />
                                 </div>
-                                <h3 className="mb-3 text-xl font-bold text-slate-900">{item.title}</h3>
-                                <p className="text-slate-600">{item.desc}</p>
-                                <Link href="/faaliyet-alanlari" className="mt-4 inline-flex items-center text-sm font-semibold text-blue-600 hover:text-blue-700">
-                                    Devamını Oku <ArrowRight className="ml-1 h-4 w-4" />
-                                </Link>
+                                <h3 className="mb-3 text-xl font-bold text-slate-900 group-hover:text-white transition-colors">{item.title}</h3>
+                                <p className="text-slate-600 group-hover:text-slate-300 transition-colors">
+                                    <span className="group-hover:hidden">{item.shortDesc}</span>
+                                    <span className="hidden group-hover:inline">{item.fullDesc}</span>
+                                </p>
                             </Card>
                         ))}
                     </div>
@@ -93,7 +113,7 @@ export default function Home() {
                         {/* Blog Preview */}
                         <div>
                             <div className="flex items-center justify-between mb-8">
-                                <h2 className="text-2xl font-bold text-slate-900">Güncel Hukuki Makaleler</h2>
+                                <h2 className="text-2xl font-bold text-slate-900">Son Blog Yazıları</h2>
                                 <Link href="/blog" className="text-blue-600 font-semibold hover:underline">Tümünü Gör</Link>
                             </div>
                             <div className="space-y-6">

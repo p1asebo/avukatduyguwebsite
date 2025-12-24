@@ -23,12 +23,12 @@ export default function PracticeAreasPage() {
 
                 <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
                     {practices.map((item, i) => (
-                        <Card key={i} className="group hover:shadow-xl hover:-translate-y-1">
+                        <Card key={i} className="group hover:shadow-2xl hover:-translate-y-2 hover:bg-slate-900 transition-all duration-300 cursor-pointer">
                             <div className="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-100 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors">
                                 <item.icon className="h-7 w-7" />
                             </div>
-                            <h3 className="mb-3 text-xl font-bold text-slate-900">{item.title}</h3>
-                            <p className="text-slate-600 leading-relaxed">{item.text}</p>
+                            <h3 className="mb-3 text-xl font-bold text-slate-900 group-hover:text-white transition-colors">{item.title}</h3>
+                            <p className="text-slate-600 leading-relaxed group-hover:text-slate-300 transition-colors">{item.text}</p>
                         </Card>
                     ))}
                 </div>

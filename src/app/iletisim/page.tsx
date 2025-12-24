@@ -75,9 +75,6 @@ export default function ContactPage() {
                     <div className="space-y-8">
                         <div>
                             <h2 className="text-2xl font-bold text-slate-900 mb-6">Bize Ulaşın</h2>
-                            <p className="text-slate-600 mb-8">
-                                Hukuki sorunlarınız için aşağıdaki iletişim kanallarından bize ulaşabilir veya formu doldurarak randevu talep edebilirsiniz.
-                            </p>
                         </div>
 
                         <div className="space-y-6">

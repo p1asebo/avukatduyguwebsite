@@ -93,31 +93,31 @@ export default async function BlogPostPage({
 
             <article className="bg-white min-h-screen">
                 {/* Hero Header */}
-                <div className="bg-slate-900 text-white py-16 pt-32">
+                <div className="bg-gradient-to-b from-slate-100 to-white py-16 pt-32">
                     <div className="container mx-auto px-6 max-w-4xl">
                         <Link
                             href="/blog"
-                            className="inline-flex items-center text-slate-400 hover:text-white mb-6 transition-colors"
+                            className="inline-flex items-center text-slate-500 hover:text-slate-700 mb-6 transition-colors"
                         >
                             <ArrowLeft className="h-4 w-4 mr-2" />
                             Tüm Yazılar
                         </Link>
 
                         <div className="flex items-center gap-2 mb-4">
-                            <Tag className="h-4 w-4 text-blue-400" />
+                            <Tag className="h-4 w-4 text-blue-600" />
                             <Link
                                 href={`/blog?category=${post.categorySlug}`}
-                                className="text-blue-400 font-medium hover:text-blue-300"
+                                className="text-blue-600 font-medium hover:text-blue-700"
                             >
                                 {post.category}
                             </Link>
                         </div>
 
-                        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold font-playfair leading-tight mb-6">
+                        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold font-playfair leading-tight mb-6 text-slate-900">
                             {post.title}
                         </h1>
 
-                        <div className="flex flex-wrap items-center gap-6 text-slate-400">
+                        <div className="flex flex-wrap items-center gap-6 text-slate-500">
                             <div className="flex items-center gap-2">
                                 <User className="h-4 w-4" />
                                 <span>Av. Duygu Sultan Açıkgöz Işık</span>
